@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <button id="ens">ajax请求</button>
+    <script>
+        $(function(){
+            $('#ens').on('click',function(){
+            $.ajax({
+            type:"get", // post data传值就可以
+            url:"http://cs.renqiukai.com/api/gyl/get_user_appid",
+            data:{tel:"13526200799"},
+            success:function(res){
+                console.log(res);
+            }
+        })
+            })
+
+        })
+ 
+    </script>
+    
+</body>
+</html>
