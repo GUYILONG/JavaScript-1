@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="showInfo1">点你大爷</button>
+        <button @click="showInf02($event,66)">点你大爷带参输入</button>  
+    </div>
+    <script type="text/javascript">
+
+        new Vue({
+            el:'#app',
+            data:{
+                name:'我是你爹'
+            },
+            methods: {
+              showInfo1(event){
+                alert('爹嗲爹')
+              }, 
+              showInf02(event,number){
+                console.log(event,number)
+                alert(this.name+number)
+
+              } 
+            },
+        })
+    </script>
+</body>
+</html>

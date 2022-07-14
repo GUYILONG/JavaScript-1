@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>条件渲染</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h2>当前的n值是:{{n}}</h2>
+        <button @click="n++">点击n+1</button>
+
+        <template v-if="n === 1">
+            <div>
+                <h1>我是===1</h1>
+            </div>
+        </template>
+    </div>
+
+</body>
+<script type="text/javascript">
+
+    new Vue({
+        el: '#app',
+        data: {
+            name: 'guyilong',
+            n: 0
+        },
+    })
+
+
+</script>
+
+</html>
